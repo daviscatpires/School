@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+  <header class="w-screen bg-gray-300 px-4 py-5 flex justify-between align-center">
+        <!-- Icon -->
+        <div>
+            <img src="../img/i.png" alt="" class="rounded-2xl h-4">
+        </div>
+        <!-- Welcome -->
+        <div>
+            <h1>Welcome</h1>
+        </div>
+        <!-- Login -->
+        <div class="flex-shrink-0 mr-5">
+            <div class="cursor-pointer font-bold w-12 h-12 bg-blue-300 flex items-center justify-center rounded-2xl">
+                Davi Scatamburgo Pires
+            </div>
+        </div>
+
+  </header>
+
+  <!-- POST -->
+  <div class="w-full bg-white rounded-lg shadow">
+    <textarea name="text" id="text" rows="3" class="w-full" maxlength="144" placeholder="What your desire?" oninput="updateCount()"></textarea>
+    <div><span id="count">144</span></div>
+  </div>
+
+  <!-- divider line -->
+  <div class="w-auto border rounded-lg">
+</div>
+
+  <!-- Button -->
+  <div class="mt-5">
+    <button
+    onclick="saveText()"
+    type="button" class="bg-gray-300 hover:bg-greay-500 text-white font-bold py-2 px-4 rounded-2xl">
+    Send
+    </button>
+  </div>
+  <br>
+
+  <!-- Gravando -->
+  <div class="mt-5">
+    <button id="start" onclick="startRecognition()" class="bg-gray-300 hover:bg-greay-500 text-white font-bold py-2 px-4 rounded-2xl">Start
+    </button>
+    <button id="start" onclick="stopRecognition()" class="bg-gray-300 hover:bg-greay-500 text-white font-bold py-2 px-4 rounded-2xl">Stop
+    </button>
+
+    <div>Transcription: <span id="transcription"></span></div>
+  </div>
+
+  <div class="content">
+    <textarea name="result" id="result" rows="10" placeholder="Resposta" class="w-full"></textarea>
+  </div>
+
+<script src="/js/app.js"></script>
+<script src="/ia/gpt.js"></script>
+</body>
+</html>
