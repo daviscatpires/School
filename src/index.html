@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>School English</title>
     <link href="../dist/output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/i.png">
 </head>
 <body>
   <header class="w-screen bg-gray-300 px-4 py-5 flex justify-between align-center">
@@ -40,7 +41,7 @@
   <div class="mt-5">
     <button
     onclick="saveText()"
-    type="button" class="bg-gray-300 hover:bg-greay-500 text-white font-bold py-2 px-4 rounded-2xl">
+    type="button" class="bg-gray-300 hover:bg-greay-500 text-white font-bold py-2 px-4 rounded-2xl" id="btn-send">
     Send
     </button>
   </div>
@@ -52,9 +53,8 @@
     </button>
     <button id="start" onclick="stopRecognition()" class="bg-gray-300 hover:bg-greay-500 text-white font-bold py-2 px-4 rounded-2xl">Stop
     </button>
-
-    <div>Transcription: <span id="transcription"></span></div>
   </div>
+  <br>
 
   <div class="content">
     <textarea name="result" id="result" rows="10" placeholder="Resposta" class="w-full"></textarea>
