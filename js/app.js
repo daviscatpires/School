@@ -3,7 +3,8 @@
 const maxLength = 144;
 const text = document.getElementById('text');
 const count = document.getElementById('count');
-const OPENAI_API_KEY = "(SUA CHAVE API)"; //Chave da api
+const OPENAI_API_KEY = "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
+"; //Chave da api
 
 function updateCount(){
     const currentLength = text.value.length;
